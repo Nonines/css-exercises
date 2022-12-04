@@ -1,5 +1,5 @@
 body, html {
-  height: 100%;
+  height: auto;
   margin: 0;
 }
 
@@ -8,6 +8,11 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 5fr 1fr;
+  gap: 15px;
 }
 
 .container div {
@@ -21,18 +26,34 @@ body, html {
 
 .header {
   background-color: #FFDE22;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .sidebar {
   background-color: #FF7755;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 .nav {
   background-color: #00DDFF;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .article {
   background-color: #bccbde;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .article p {
@@ -44,4 +65,7 @@ body, html {
 
 .footer {
   background-color: #393f4d;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
